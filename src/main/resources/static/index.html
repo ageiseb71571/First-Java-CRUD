@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Product Management</h1>
+            <p class="subtitle">First Java CRUD Application </p>
+        </header>
+
+        <!-- Notification Banner -->
+        <div id="notification" class="notification hidden"></div>
+
+        <main class="content-grid">
+            <!-- Form Card: Create / Update -->
+            <section class="card form-card">
+                <h2 id="form-title">Add New Product</h2>
+                <form id="product-form">
+                    <input type="hidden" id="product-id">
+
+                    <div class="form-group">
+                        <label for="product-name">Product Name</label>
+                        <input type="text" id="product-name" placeholder="e.g. Mechanical Keyboard" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-price">Price ($)</label>
+                        <input type="number" id="product-price" step="0.01" min="0" placeholder="e.g. 99.99" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="submit-btn" class="btn btn-primary">Save Product</button>
+                        <button type="button" id="cancel-btn" class="btn btn-secondary hidden">Cancel</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Product List Card -->
+            <section class="card list-card">
+                <div class="list-header">
+                    <h2>Product Inventory</h2>
+                    <span id="product-count" class="badge">0 products</span>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th class="text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="product-list">
+                            <!-- Populated dynamically via app.js -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Empty State -->
+                <div id="empty-state" class="empty-state hidden">
+                    <p>No products found in the database. Use the form above to add your first product!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
