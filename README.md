@@ -9,5 +9,5 @@ The main goal of this assignment is to practise:
 - ~~creating and using a GitHub repository,~~
 - commits and branches,
 - Pull Requests,
-- collaboration with another student(Firuz Farrukhi),
+- collaboration with another student(Firuz Farrukhi id70643),
 - and running a simple Java application locally.
